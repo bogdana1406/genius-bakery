@@ -239,6 +239,27 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 }
+
+/* carusel */ 
+.carusel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-brand-dark);
+    cursor: pointer;
+    fill: var(--color-primary-dark);
+}
+.carusel-button:hover {
+    background-color: var(--color-primary-dark);
+}
+.carusel-button:hover .carusel-arrow {
+    fill: var(--color-primary-light);
+}
+
 /* contacts-section */
 .contacts-title {
     margin-bottom: 16px;
@@ -263,4 +284,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
+}
+.address-icon {
+    fill: var(--color-primary-light);
 }
