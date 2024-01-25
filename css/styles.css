@@ -36,7 +36,9 @@
 }
 
 /* base */
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 body {
@@ -53,6 +55,9 @@ body {
     max-width: 1288px;
     margin: 0 auto;
     padding: 0 24px;
+}
+a {
+    display: inline-block;
 }
 address {
     font-style: normal;
@@ -190,6 +195,18 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 710px;
 }
 /* chefs-section */
+.chefs-list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+.chefs-item {
+    flex-basis: calc((100% - 30px)/2);
+}
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
 .chefs-title {
     margin: 0 auto 80px;
     max-width: 520px;
@@ -210,9 +227,20 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-darl);
 }
+.chef-text p {
+    margin-bottom: 24px;
+}
+.chef-text p:last-child {
+    margin-bottom: 0px;
+}
 /* format-section */
 .formats-title {
     margin-bottom: 80px;
+}
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
 }
 .format-title {
     font-size: 24px;
@@ -243,6 +271,7 @@ h1, h2, h3, h4, h5, h6, p {
 /* carusel */ 
 .carusel-button {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     width: 44px;
@@ -261,11 +290,45 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* contacts-section */
+.contact-section {
+    padding-bottom: 96px;
+}
 .contacts-title {
     margin-bottom: 16px;
 }
-
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
 /* footer */
+.footer {
+    padding: 32px 0;
+}
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav,
+.footer-address
+ {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+.footer-logo,
+.footer-menu
+ {
+    flex-grow: 1;
+}
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
 .address-link {
     color: var(--color-primary-light);
     font-size: 16px;
